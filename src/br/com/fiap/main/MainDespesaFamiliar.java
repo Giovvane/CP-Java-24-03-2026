@@ -1,19 +1,35 @@
-                        //CP de JAVA - 24/03/2026 - Pro.Gilberto
+//CP de JAVA - 24/03/2026 - Pro.Gilberto
 //Tárik Moussa Alma - RM: 571411
-//Giovanne - RM:
-//Fabricio Aquiles - RM:
-package br.com.fiap.main;
+//Giovane Dias Chicoli - RM: 569750
+//Fabricio Aquiles Sales da Silva - 570985 - RM: 570985
+package br.com.fiap.bean;
 
-public class MainDespesaFamiliar {
- public static void main(String[] args) {
+import br.com.fiap.bean.DespesaFamiliar;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
         DespesaFamiliar despesa = new DespesaFamiliar();
-        despesa.rendaFamiliar = 10000;
-        despesa.gastoComLuz = 100;
-        despesa.gastoComAgua = 100;
-        despesa.gastoComInternet = 200;
-        despesa.valorMensalidadeDaAcademia = 50;
-        despesa.numeroDeMoradores = 5;
-        System.out.printf("Renda Familiar: R$ %.3f\nMoradores: %d\nConta de Luz: R$ %.3f\nConta de Água: R$ %.3f\nConta de Internet: R$ %.3f\nMensalidade da Academia: R$ %.3f\nTotal de Despesas: R$ %.3f\nRenda Familiar Líquida: R$ %.3f",despesa.rendaFamiliar, despesa.numeroDeMoradores, despesa.gastoComLuz, despesa.gastoComAgua, despesa.gastoComInternet, despesa.valorMensalidadeDaAcademia, despesa.calcularTotalDeDespesas(), despesa.calcularRendaFamiliarLiquida(), despesa.calcularTotalDeDespesas());
+        float rendaFamiliar, gastoComLuz, gastoComAgua, gastoComInternet, valorMensalidadeDaAcademia,numeroDeMoradores;
+        Scanner scan;
+        try {
+            scan = new Scanner(System.in);
+            System.out.println("Digite sua renda familiar: ");
+            despesa.rendaFamiliar = scan.nextFloat();
+            System.out.println("Digite seus gastos com luz: ");
+            despesa.gastoComLuz = scan.nextFloat();
+            System.out.println("Digite seus gastos com água: ");
+            despesa.gastoComAgua = scan.nextFloat();
+            System.out.println("Digite seus gastos com internet: ");
+            despesa.gastoComInternet = scan.nextFloat();
+            System.out.println("Digite seus gastos com a mensalidade da academia");
+            despesa.valorMensalidadeDaAcademia = scan.nextFloat();
+            System.out.println("Digite o número de moradores");
+            despesa.numeroDeMoradores = scan.nextFloat();
+        } catch (Exception e){
+            System.out.println("Formato incorreto");
+        }
+        System.out.printf("Total de Despesas: R$ %.3f\nRenda Familiar Líquida: R$ %.3f", despesa.calcularTotalDeDespesas(), despesa.calcularRendaFamiliarLiquida(), despesa.calcularTotalDeDespesas());
     }
 }
-
