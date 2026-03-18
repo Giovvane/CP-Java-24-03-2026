@@ -1,7 +1,7 @@
                         //CP de JAVA - 24/03/2026 - Pro.Gilberto
 //Tárik Moussa Alma - RM: 571411
-//Giovanne - RM:
-//Fabricio Aquiles - RM:
+//Giovane Dias Chicoli - RM: 569750
+//Fabricio Aquiles Sales da Silva - RM: 570985
 package br.com.fiap.bean;
 
 public class DespesaFamiliar {
