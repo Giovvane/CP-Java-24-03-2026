@@ -5,6 +5,24 @@
 package br.com.fiap.bean;
 
 public class DespesaFamiliar {
+    //Atributos
+    public double rendaFamiliar;
+    public int numeroDeMoradores;
+    public double gastoComLuz;
+    public double gastoComAgua;
+    public double gastoComInternet;
+    public double valorMensalidadeDaAcademia;
 
+    //Métodos
+    public double calcularTotalDeDespesas() {
+        double valorAcademiaXmembros;
+        valorAcademiaXmembros = valorMensalidadeDaAcademia * numeroDeMoradores;
+        return gastoComLuz + gastoComAgua + gastoComInternet + valorAcademiaXmembros;
+    }
 
+    public double calcularRendaFamiliarLiquida(){
+        double rendaFamiliarLiquida;
+        rendaFamiliarLiquida = rendaFamiliar - calcularTotalDeDespesas();
+        return rendaFamiliarLiquida;
+    }
 }
