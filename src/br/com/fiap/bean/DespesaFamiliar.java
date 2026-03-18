@@ -21,8 +21,6 @@ public class DespesaFamiliar {
     }
 
     public double calcularRendaFamiliarLiquida(){
-        double calcularRendaFamiliarLiquida;
-        calcularRendaFamiliarLiquida = rendaFamiliar - calcularTotalDeDespesas();
-        return calcularRendaFamiliarLiquida;
+     return rendaFamiliar - calcularTotalDeDespesas();
     }
 }
