@@ -16,4 +16,4 @@ public class MainDespesaFamiliar {
         System.out.printf("Renda Familiar: R$ %.3f\nMoradores: %d\nConta de Luz: R$ %.3f\nConta de Água: R$ %.3f\nConta de Internet: R$ %.3f\nMensalidade da Academia: R$ %.3f\nTotal de Despesas: R$ %.3f\nRenda Familiar Líquida: R$ %.3f",despesa.rendaFamiliar, despesa.numeroDeMoradores, despesa.gastoComLuz, despesa.gastoComAgua, despesa.gastoComInternet, despesa.valorMensalidadeDaAcademia, despesa.calcularTotalDeDespesas(), despesa.calcularRendaFamiliarLiquida(), despesa.calcularTotalDeDespesas());
     }
 }
-}
+
